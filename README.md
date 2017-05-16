@@ -5,9 +5,7 @@ Predis provides an in-memory mock client implementation for testing purposes, si
 as well as a real client that passes operations through to [Carmine](https://github.com/ptaoussanis/carmine/).
 
 ### Installation
-[![Clojars Project](http://clojars.org/com.andrewberls/predis/latest-version.svg)]()
-
-![Build Status](https://circleci.com/gh/andrewberls/predis.svg?style=shield&circle-token=b3151df11a25e1354af007e40c727ead5b9e676e)
+[![Clojars Project](http://clojars.org/amperity/predis/latest-version.svg)]()
 
 ### Usage
 ```clj

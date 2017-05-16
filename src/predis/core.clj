@@ -40,6 +40,10 @@
   (incr [this k])
   (incrby [this k increment])
   (incrbyfloat [this k increment])
+  (info
+    [this]
+    [this section])
+  (info* [this])
   (mget [this ks])
   (mset [this kvs]
     "Ex: (mset [[\"foo\" \"1\"] [\"bar\" \"2\"]])")

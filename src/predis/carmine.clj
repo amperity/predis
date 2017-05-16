@@ -83,6 +83,15 @@
   (core/incrbyfloat [this k increment]
     (car/wcar config (car/incrbyfloat k increment)))
 
+  (core/info [this]
+    (car/wcar config (car/info)))
+
+  (core/info [this args]
+    (car/wcar config (apply car/info args)))
+
+  (core/info* [this]
+    (car/wcar config (apply car/info* [true])))
+
   (core/mget [this ks]
     (car/wcar config (apply car/mget ks)))
 

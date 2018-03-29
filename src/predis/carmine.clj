@@ -242,6 +242,11 @@
   (sunionstore [this dest k-or-ks]
     (car/wcar config (apply car/sunionstore dest (util/vec-wrap k-or-ks))))
 
+  (core/msadd [this kvss]
+    (car/wcar config (run! (fn [[k vs]]
+                             (apply car/sadd k vs))
+                           kvss)))
+
   (zadd [this k score m]
     (core/zadd this k [[score m]]))
 

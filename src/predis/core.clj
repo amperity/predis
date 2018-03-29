@@ -122,6 +122,11 @@
   (sunion [this k-or-ks])
   (sunionstore [this dest k-or-ks])
 
+  ; Bulk sets
+  (msadd [this kvss]
+    "Ex:
+       (msadd \"my-set\" [[1 [2 3]] 4 [5]])")
+
   ; Sorted Sets
   (zadd [this k score m] [this k kvs]
     "Add a single member with a given score, or a seq of

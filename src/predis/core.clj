@@ -20,7 +20,7 @@
        (scan \"0\" {:match \"my-prefix*\" :count 10})")
 
   ; Server
-  (flushdb [this])
+  (flushdb [this] [this async?])
   (dbsize [this])
 
   ; Connection

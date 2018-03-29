@@ -45,8 +45,12 @@
         (car/wcar config (apply car/scan cursor scan-opts)))))
 
   ; Server
+  (core/flushdb [this async?]
+    (let [flush-fn (if async? #(car/flushdb "async") car/flushdb)]
+     (car/wcar config (flush-fn))))
+
   (core/flushdb [this]
-    (car/wcar config (car/flushdb)))
+    (core/flushdb this false))
 
   (core/dbsize [this]
     (car/wcar config (car/dbsize)))

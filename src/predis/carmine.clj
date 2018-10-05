@@ -14,6 +14,9 @@
   (core/del [this k-or-ks]
     (car/wcar config (apply car/del (util/vec-wrap k-or-ks))))
 
+  (core/unlink [this k-or-ks]
+    (car/wcar config (apply car/unlink (util/vec-wrap k-or-ks))))
+
   (core/exists [this k]
     (car/wcar config (car/exists k)))
 

@@ -25,6 +25,16 @@
       (is (= (r/del mock-client k) (r/del carmine-client k)))
       (test-utils/dbs-equal mock-client carmine-client))))
 
+(defspec test-unlink
+  test-utils/nruns
+  (let [mock-client (mock/->redis)]
+    (prop/for-all [k gen/string-alphanumeric
+                   v gen/string-alphanumeric]
+      (test-utils/assert-set mock-client carmine-client k v)
+      (test-utils/dbs-equal mock-client carmine-client)
+      (is (= (r/unlink mock-client k) (r/unlink carmine-client k)))
+      (test-utils/dbs-equal mock-client carmine-client))))
+
 (defspec test-rename
   test-utils/nruns
   (let [mock-client (mock/->redis)]

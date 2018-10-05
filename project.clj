@@ -4,7 +4,7 @@
   :license {:name "MIT License"
             :url "http://opensource.org/licenses/MIT"}
   :dependencies [[org.clojure/clojure "1.8.0"]
-                 [com.taoensso/carmine "2.11.1"]
+                 [com.taoensso/carmine "2.19.0"]
                  [org.clojure/test.check "0.7.0"]]
   :profiles {:repl
              {:source-paths ["dev"]}

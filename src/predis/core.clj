@@ -4,6 +4,7 @@
 (defprotocol IRedis
   ; Keys
   (del [this k-or-ks])
+  (unlink [this k-or-ks])
   (exists [this k])
   (keys [this pat])
   (randomkey [this])

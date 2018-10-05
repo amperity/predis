@@ -61,6 +61,9 @@
       (reset! store store')
       nremoved))
 
+  (core/unlink [this k-or-ks]
+    (core/del this k-or-ks))
+
   (core/exists [this k]
     (if (core/get this k) 1 0))
 

@@ -1,4 +1,4 @@
-(defproject amperity/predis "0.2.2"
+(defproject amperity/predis "0.2.3"
   :description "An in-memory Redis mock for Clojure"
   :url "https://github.com/amperity/predis"
   :license {:name "MIT License"
